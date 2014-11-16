@@ -5,33 +5,11 @@
 <html lang="en" dir="ltr">
 <head>
 	
-	{% comment %} https://github.com/mhulse/mhulse.github.io/blob/picard/_includes/head.html {% endcomment %}
-	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	
-	{% if page.title %}
-		{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
-		<title>{{ title }}</title>
-		<meta property="og:title" content="{{ title }}">
-	{% else %}
-		{% capture title %}{% if paginator.page > 1 %}Page {{ paginator.page }} | {% endif %}{{ site.title }}{% endcapture %}
-		<title>{{ title }}</title>
-		<meta property="og:title" content="{{ title }}">
-	{% endif %}
-	
-	{% if page.deck %}
-		{% capture description %}{{ page.deck | markdownify | strip_html | strip_newlines }}{% endcapture %}
-		<meta name="description" content="{{ description }}">
-		<meta property="og:description" content="{{ description }}">
-	{% else %}
-		{% capture description %}{{ site.description }}{% endcapture %}
-		<meta name="description" content="{{ description }}">
-		<meta property="og:description" content="{{ description }}">
-	{% endif %}
-	
-	{% capture keywords %},{{ page.categories | join: ',' }},{{ page.tags | join: ',' }},{{ site.keywords | join: ',' }}{% endcapture %}
-	<meta name="keywords" content="{{ keywords | replace: ",,,", "," | replace: ",,", "," | remove_first: "," }}">
+	<title>{{ site.title }}</title>
+	<meta name="description" content="{{ site.description }}">
 	
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/site.css?v={{ site.time | date: "%s" }}">
 	
@@ -44,35 +22,15 @@
 	
 	<h6><a href="{{ site.baseurl }}/">{{ site.title }}</a></h6>
 	
-	<hr>
-	
 	<main role="main">
 		
 		<section>
 			
-			<div class="box">
+			<article itemscope itemtype="http://schema.org/Article">
 				
-				{% for post in paginator.posts %}
-					
-					<article itemscope itemtype="http://schema.org/Article">
-						
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-						
-					</article>
-					
-					{% if forloop.last %}{% else %}<hr>{% endif %}
-					
-				{% endfor %}
+				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 				
-				<hr>
-				
-				<p><a href="https://api.github.com/orgs/rgpages/repos?callback=foo&amp;per_page=100&amp;page=1">GitHub API call</a></p>
-				
-				<pre>{{ site.github }}</pre>
-				
-				<h6>{{ site.github.project_title }}</h6>
-				
-			</div> <!-- /.box -->
+			</article>
 			
 		</section>
 		
