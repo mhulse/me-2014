@@ -1,0 +1,29 @@
+baseurl: "/me-2014"
+description: "Links to professional and personal projects. "
+excerpt_separator: ""
+exclude:
+  - "bower*"
+  - "Gemfile*"
+  - "LICENSE"
+  - "node*"
+  - "*.json"
+  - "*.md"
+  - "*.log"
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+keywords: ["jekyll", "test", "boiler", "github", "pages"]
+paginate: 1
+paginate_path: "/:num/"
+permalink: "/:title/"
+relative_permalinks: "false"
+safe: "true"
+sass:
+  sass_dir: "assets/styles/_includes"
+  style: "compressed"
+  precision: 14
+  sourcemap: "none"
+timezone: "America/Los_Angeles"
+title: "Micky Hulse"

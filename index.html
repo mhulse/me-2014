@@ -1,0 +1,97 @@
+---
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+	
+	{% comment %} https://github.com/mhulse/mhulse.github.io/blob/picard/_includes/head.html {% endcomment %}
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	{% if page.title %}
+		{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+		<title>{{ title }}</title>
+		<meta property="og:title" content="{{ title }}">
+	{% else %}
+		{% capture title %}{% if paginator.page > 1 %}Page {{ paginator.page }} | {% endif %}{{ site.title }}{% endcapture %}
+		<title>{{ title }}</title>
+		<meta property="og:title" content="{{ title }}">
+	{% endif %}
+	
+	{% if page.deck %}
+		{% capture description %}{{ page.deck | markdownify | strip_html | strip_newlines }}{% endcapture %}
+		<meta name="description" content="{{ description }}">
+		<meta property="og:description" content="{{ description }}">
+	{% else %}
+		{% capture description %}{{ site.description }}{% endcapture %}
+		<meta name="description" content="{{ description }}">
+		<meta property="og:description" content="{{ description }}">
+	{% endif %}
+	
+	{% capture keywords %},{{ page.categories | join: ',' }},{{ page.tags | join: ',' }},{{ site.keywords | join: ',' }}{% endcapture %}
+	<meta name="keywords" content="{{ keywords | replace: ",,,", "," | replace: ",,", "," | remove_first: "," }}">
+	
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/site.css?v={{ site.time | date: "%s" }}">
+	
+	<style></style>
+	
+	<script>!function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r,i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=+new Date,a=s.createElement(o),m=s.getElementsByTagName(o)[0],a.src=g,m.parentNode.insertBefore(a,m)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-46485001-1","mky.io");ga("send","pageview");</script>
+	
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+	
+	<h6><a href="{{ site.baseurl }}/">{{ site.title }}</a></h6>
+	
+	<hr>
+	
+	<main role="main">
+		
+		<section>
+			
+			<div class="box">
+				
+				{% for post in paginator.posts %}
+					
+					<article itemscope itemtype="http://schema.org/Article">
+						
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						
+					</article>
+					
+					{% if forloop.last %}{% else %}<hr>{% endif %}
+					
+				{% endfor %}
+				
+				<hr>
+				
+				<p><a href="https://api.github.com/orgs/rgpages/repos?callback=foo&amp;per_page=100&amp;page=1">GitHub API call</a></p>
+				
+				<pre>{{ site.github }}</pre>
+				
+				<h6>{{ site.github.project_title }}</h6>
+				
+			</div> <!-- /.box -->
+			
+		</section>
+		
+	</main>
+	
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<script src="{{ site.baseurl }}/assets/scripts/site.js?v={{ site.time | date: "%s" }}"></script>
+	
+	<script>
+		
+		$(function() {
+			
+			
+			
+		});
+		
+	</script>
+	
+</body>
+</html>
+
+<!-- Site last updated: {% assign m = site.time | date: "%B" %}{% case m %}{% when 'April' or 'May' or 'June' or 'July' %}{{ m }}{% when 'September' %}Sept.{% else %}{{ site.time | date: "%b" }}.{% endcase %} {{ site.time | date: "%-d" }}, {{ site.time | date: "%Y" }}. -->

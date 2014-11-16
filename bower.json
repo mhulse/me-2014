@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "devDependencies": {
+    "pure": "~0",
+    "jquery": "~2"
+  },
+  "install": {
+    "path": {
+      "css": "assets/styles/_includes",
+      "js": "assets/scripts/_includes"
+    },
+    "sources": {
+      "pure": {
+        "mapping": [
+          {
+            "bower_components/pure/pure.css": "_pure.scss",
+            "bower_components/pure/grids-responsive.css": "_grids-r.scss"
+          }
+        ]
+      },
+      "jquery": "bower_components/jquery/dist/jquery.min.js"
+    }
+  }
+}
