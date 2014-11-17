@@ -1,5 +1,5 @@
 baseurl: "/me-2014"
-description: "Links to professional and personal projects. "
+description: "Web Developer/Designer"
 excerpt_separator: ""
 exclude:
   - "*.json"
