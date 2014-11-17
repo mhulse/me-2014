@@ -44,17 +44,17 @@ footer[role="contentinfo"] {
 	span { display: block; }
 	span span { display: none; }
 	
-	// a {
+	a {
 		
-	// 	&,
-	// 	&:visited { color: $gray9; }
-	// 	.no-touch &:visited:hover,
-	// 	&:focus,
-	// 	.no-touch &:focus:hover,
-	// 	.no-touch &:hover,
-	// 	&:active { color: $milk; }
+		&,
+		&:visited { color: $gray8; }
+		// .no-touch &:visited:hover,
+		// &:focus,
+		// .no-touch &:focus:hover,
+		// .no-touch &:hover,
+		// &:active { color: $milk; }
 		
-	// }
+	}
 	
 	@media all and (min-width: 640px) {
 		
