@@ -1,8 +1,9 @@
 {
   "name": "bower",
   "devDependencies": {
-    "pure": "~0",
-    "jquery": "~2"
+    "headroom.js": "~0",
+    "jquery": "~2",
+    "pure": "~0"
   },
   "install": {
     "path": {
@@ -10,15 +11,18 @@
       "js": "assets/scripts/_includes"
     },
     "sources": {
-      "pure": {
+      "headroom.js": {
         "mapping": [
-          {
-            "bower_components/pure/pure.css": "_pure.scss",
-            "bower_components/pure/grids-responsive.css": "_grids-r.scss"
-          }
+          { "bower_components/headroom.js/dist/headroom.min.js": "headroom.min.js" },
+          { "bower_components/headroom.js/dist/jQuery.headroom.min.js": "jquery.headroom.min.js" }
         ]
       },
-      "jquery": "bower_components/jquery/dist/jquery.min.js"
+      "jquery": "bower_components/jquery/dist/jquery.min.js",
+      "pure": {
+        "mapping": [
+          { "bower_components/pure/pure.css": "_pure.scss" }
+        ]
+      }
     }
   }
 }

@@ -21,6 +21,18 @@ $ npm install
 $ npm run bower-installer
 ```
 
+Everyone so often:
+
+```bash
+# Update rvm:
+$ rvm get stable
+# Update rvm Ruby:
+$ rvm install current && rvm use current
+# Update rvm gems:
+$ gem update
+# Brew:
+$ brew update
+$ brew doctor
 ---
 
 Copyright © 2014 Micky Hulse. All rights reserved.

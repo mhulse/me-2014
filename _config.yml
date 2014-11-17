@@ -2,13 +2,13 @@ baseurl: "/me-2014"
 description: "Links to professional and personal projects. "
 excerpt_separator: ""
 exclude:
-  - "bower*"
+  - "*.json"
+  - "*.log"
+  - "*.md"
+  - "bower_components"
   - "Gemfile*"
   - "LICENSE"
-  - "node*"
-  - "*.json"
-  - "*.md"
-  - "*.log"
+  - "node_modules"
 gems:
   - jekyll-mentions
   - jemoji
@@ -26,4 +26,4 @@ sass:
   precision: 14
   sourcemap: "none"
 timezone: "America/Los_Angeles"
-title: "Micky Hulse"
+title: "Michael Hulse"

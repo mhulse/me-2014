@@ -2,15 +2,23 @@
 ---
 
 <!doctype html>
-<html lang="en" dir="ltr">
+<html class="no-touch no-js" lang="en" dir="ltr">
 <head>
 	
+	<meta http-equiv="x-ua-compatible" content="chrome=1">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script>/*! no-touch uglified | https://gist.github.com/mhulse/4704893 */!function(o,n,c){("ontouchstart"in o||o.DocumentTouch&&n instanceof DocumentTouch||c.MaxTouchPoints>0||c.msMaxTouchPoints>0)&&(n.documentElement.className=n.documentElement.className.replace(/\bno-touch\b/,"touch"))}(window,document,navigator);</script>
+	<script>/*! no-js uglified | https://gist.github.com/mhulse/4704893 */!function(e){e.documentElement.className=e.documentElement.className.replace(/\bno-js\b/,"js")}(document);</script>
+	
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
 	
 	<title>{{ site.title }}</title>
 	<meta name="description" content="{{ site.description }}">
 	
+	<!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/site.css?v={{ site.time | date: "%s" }}">
 	
 	<style></style>
@@ -20,21 +28,923 @@
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 	
-	<h6><a href="{{ site.baseurl }}/">{{ site.title }}</a></h6>
+	<header id="headroom">
+		<div>
+			<img src="{{ site.baseurl }}/assets/images/me.png" width="65" title="{{ site.title }}">
+			<div>
+				<h5 class="h2"><a href="http://linkedin.com/in/mickyhulse/" target="_blank" title="Check out my profile on LinkedIn!">{{ site.title }}</a></h5>
+				<h6 class="sh5">Web Developer/Designer</a></h6>
+			</div>
+		</div>
+	</header>
 	
 	<main role="main">
 		
-		<section>
+		<div class="pure-g pure-pad">
 			
-			<article itemscope itemtype="http://schema.org/Article">
+			<div class="pure-u-1 pure-u-md-1-3">
 				
-				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+				<section>
+					
+					<header class="head">
+						<h3>Web</h3>
+						<p>Projects of note</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://registerguard.com" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">The Register-Guard</span>
+								<span class="secondary">The main daily newspaper for Eugene, Springfield, and Lane County, Oregon.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://registerguard.com" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">RG Blogs</span>
+								<span class="secondary">WordPress blogs, theme built from scratch</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://marketplace.registerguard.com/" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">RG Marketplace</span>
+								<span class="secondary">Built using the Slim PHP framework</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/election-2014-general/" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">2014 General Election</span>
+								<span class="secondary">General election coverage for Lane County, Oregon; developed and curated by The Register-Guard.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://marketplace.registerguard.com/" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Popular</span>
+								<span class="secondary">Top 100 stories in the last 24 hours</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">Top Stories</span>
+								<span class="secondary">Top 25 stories going back 1 hour</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://go.registerguard.com/entertainment/" target="_blank">
+								<span class="tertiary">Python</span>
+								<span class="primary">Go Entertainment</span>
+								<span class="secondary">The entertainment &amp; event source for Eugene, Springfield, &amp; surrounding areas in Lane County</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://readerschoice.registerguard.com/" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">Readers’ Choice</span>
+								<span class="secondary">The Register-Guard’s 6th annual Readers’ Choice awards</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://rgne.ws/fb_app-i" target="_blank">
+								<span class="tertiary">Python</span>
+								<span class="primary">Oregon Football</span>
+								<span class="secondary">The must-have app for Duck football fans.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://rgne.ws/fb_app-i" target="_blank">
+								<span class="tertiary">Python</span>
+								<span class="primary">Oregon Basketball</span>
+								<span class="secondary">Love Duck basketball? Then you’ll love this.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://uploads.mky.io/postgame-brew/" target="_blank">
+								<span class="tertiary">HTML</span>
+								<span class="primary">Postgame Brew</span>
+								<span class="secondary">Landing page built for The Register-Guard’s former sportswriter Rob Moseley and columnist George Schroeder.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://assets.registerguard.com/packages/pct-oregon-2011/" target="_blank">
+								<span class="tertiary">HTML</span>
+								<span class="primary">PCT Oregon 2011</span>
+								<span class="secondary">Web page dedicated to following Bob Welch’s 452-mile trek through Oregon.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io" target="_blank">
+								<span class="tertiary">Jekyll</span>
+								<span class="primary">mky.io</span>
+								<span class="secondary">My personal website</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
 				
-			</article>
+				<section>
+					
+					<header class="head">
+						<h3>Web solutions</h3>
+						<p>Themes and templates</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://github.com/registerguard/bulldog" target="_blank">
+								<span class="tertiary">HTML</span>
+								<span class="primary">Bulldog</span>
+								<span class="secondary">The official 2013 registerguard.com theme.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/zeppelin" target="_blank">
+								<span class="tertiary">HTML</span>
+								<span class="primary">Zeppelin</span>
+								<span class="secondary">Simple 3rd party header for use on Register-Guard project pages and websites.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/drone" target="_blank">
+								<span class="tertiary">HTML</span>
+								<span class="primary">Drone</span>
+								<span class="secondary">The Register-Guard’s 3rd party sub-theme.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header class="head">
+						<h3>3rd party</h3>
+						<p>Some companies I’ve interfaced with</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://newscyclesolutions.com/" target="_blank">
+								<span class="primary">NEWSCYCLE Solutions</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.adicio.com/" target="_blank">
+								<span class="primary">Adicio</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.legacy.com" target="_blank">
+								<span class="primary">Legacy</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mailchimp.com" target="_blank">
+								<span class="primary">MailChimp</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.surveygizmo.com/" target="_blank">
+								<span class="primary">SurveyGizmo</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://secondstreet.com/" target="_blank">
+								<span class="primary">Second Street</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://parade.com/" target="_blank">
+								<span class="primary">Parade</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.ap.org/" target="_blank">
+								<span class="primary">Associated Press</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.doapps.com/" target="_blank">
+								<span class="primary">DoApp Inc.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.tecnavia.com" target="_blank">
+								<pan class="primary">Technavia</pan>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.stats.com/" target="_blank">
+								<span class="primary">Stats.com</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kaango.com/" target="_blank">
+								<span class="primary">Kaango.com</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.zap2it.com/" target="_blank">
+								<span class="primary">Zap2it</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.brightcove.com" target="_blank">
+								<span class="primary">Brightcove</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://openx.com/" target="_blank">
+								<span class="primary">OpenX</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.xaxis.com/" target="_blank">
+								<span class="primary">Open AdStream</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header class="head">
+						<h3>Social Media</h3>
+						<p>Setup and automation</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://www.facebook.com/registerguard" target="_blank">
+								<span class="primary">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/registerguard/" target="_blank">
+								<span class="primary">Twitter</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>GitHub, Grunt and Jekyll</h3>
+						<p>Workflows and “build” templates</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#gitban-at-the-register-guard" target="_blank">
+								<span class="primary">GitBan</span>
+								<span class="secondary">Kanban + GitHub repository issue tracking</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/grunt-html-boiler" target="_blank">
+								<span class="primary">Grunt HTML Boiler</span>
+								<span class="secondary">A starting point for Grunt.js HTML projects/repositories.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jekyll-boiler" target="_blank">
+								<span class="primary">Jekyll Boiler</span>
+								<span class="secondary">Bare bones Jekyll example site using GitHub’s “pages” gem.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/grunt-js-boiler" target="_blank">
+								<span class="primary">Grunt JS Boiler</span>
+								<span class="secondary">A starting point for Grunt.js JavaScript projects/repositories.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Fonts</h3>
+						<p>Created with Fontographer</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://github.com/registerguard/rgweb-font" target="_blank">
+								<span class="primary">RGWeb font</span>
+								<span class="secondary">The Register-Guard's flag web font.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#bug-and-icons-for-print" target="_blank">
+								<span class="primary">Bug &amp; icons for print</span>
+								<span class="secondary">The Register-Guard</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/m" target="_blank">
+								<span class="primary">m</span>
+								<span class="secondary">My "m" web font.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+			</div> <!-- .pure-u-1 -->
 			
-		</section>
+			<div class="pure-u-1 pure-u-md-1-3">
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Plugins</h3>
+						<p>Client side selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://github.com/mhulse/jquery-pollster" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Pollster</span>
+								<span class="secondary">Simple plugin to manage long polling for ajax JSON(p) requests.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-megawhale" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">MegaWhale</span>
+								<span class="secondary">Like Superfish, but for mega menus!</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-megakrill" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">MegaKrill</span>
+								<span class="secondary">Compact navigation for mobile devices and responsive layouts.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-harmonia" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Harmonia</span>
+								<span class="secondary">Replace an (un)ordered list with a form select.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-bigglesworth" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Mr. Bigglesworth</span>
+								<span class="secondary">A simple "instant search" plugin, powered by jQuery.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-ion" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Ion</span>
+								<span class="secondary">Super simple jQuery-powered accordions.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-nutshell" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Nutshell</span>
+								<span class="secondary">In a nutshell, simple jQuery-powered tabs.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-nutshell" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Kerplop!</span>
+								<span class="secondary">Move stuff from one place to another.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-nutshell" target="_blank">
+								<span class="tertiary">jQuery</span>
+								<span class="primary">Benjamins</span>
+								<span class="secondary">The Responsive ad delivery script for OpenX.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/jquery-nutshell" target="_blank">
+								<span class="tertiary">JavaScript</span>
+								<span class="primary">onMediaQuery</span>
+								<span class="secondary">Trigger javascript when CSS media queries change.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Plugins</h3>
+						<p>Server side selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://github.com/mhulse/jekyll-nada" target="_blank">
+								<span class="tertiary">Ruby</span>
+								<span class="primary">Jekyll Nada</span>
+								<span class="secondary">A glorified Jekyll include tag.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/scraphper" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">Scraphper!</span>
+								<span class="secondary">PHP screen-scraping class with caching (including images).</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/wp-deck" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">WordPress Deck</span>
+								<span class="secondary">A simple way to add a deck (aka subhead) to your posts using the post title field and a specified delimiter.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/pick" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">custom.rg.Scraper</span>
+								<span class="secondary">"Scraper" class for DTI's ContentPublisher CMS which is built on Intersystems Caché, the world's fastest high performance object database.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/pick" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">Pick</span>
+								<span class="secondary">Get pictures attached to a story and order them by vieworder (+ a whole lot more!).</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/slotted" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">Slotted</span>
+								<span class="secondary">Caché DTI ContentPublisher: Returns a %ListOfObjects of dt.cms.schema.Mapping objects from an Area(s) in a Section.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/custom.rg.ApDateTimeRule" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">custom.rg.ApDateTimeRule</span>
+								<span class="secondary">Associated Press formatted date/time Caché Server Page RULE for DTI's Content Publisher system.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/custom.rg.EmailObfuscateRule" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">custom.rg.EmailObfuscateRule</span>
+								<span class="secondary">E-mail obfuscation RULE/tag for DTI's Content Publisher system.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/delim" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">Delim</span>
+								<span class="secondary">Parses a delimited string and returns an iterable %ArrayOfDataTypes object.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/rg-gravatar" target="_blank">
+								<span class="tertiary">Caché</span>
+								<span class="primary">RG Gravatar</span>
+								<span class="secondary">Gravatar RULE/tag for Caché/Objectscript.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_apstylee" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">AP Stylee</span>
+								<span class="secondary">This ExpressionEngine v2 plugin converts a timestamp into an Associated Press style formatted date and time.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_sizeplus" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">Size Plus!</span>
+								<span class="secondary">Expression Engine 2.0 plugin: Get image size plus more</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_includee" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">Includee</span>
+								<span class="secondary">Expression Engine 2.0 plugin: (Random) PHP[5] include()/readfile(), plus optional caching.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_eencode" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">EEncode</span>
+								<span class="secondary">Expression Engine 2.0 plugin: Convert all applicable characters to HTML entities.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_keywordz" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">Keywordz</span>
+								<span class="secondary">Expression Engine 2.0 plugin: Keywordz will take an input string and output comma-delimited (meta) keyword string. Common and duplicate words will be removed from the output string.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/mah_x2html" target="_blank">
+								<span class="tertiary">PHP</span>
+								<span class="primary">x2html</span>
+								<span class="secondary">Expression Engine 2.0 plugin: x2html Converts XHTML to HTML.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header class="head">
+						<h3>Django</h3>
+						<p>Publicly available web applications</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="https://github.com/registerguard/django-ad-manager" target="_blank">
+								<span class="primary">Ad Manager</span>
+								<span class="secondary">An application that helps to manage, schedule and control OpenX ads from one server to another; intended for use on responsive webpages.</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/registerguard/django-dox" target="_blank">
+								<span class="primary">Dox</span>
+								<span class="secondary">Yet another Django flat pages app on steroids.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header class="head">
+						<h3>Flash</h3>
+						<p>Actionscript code and projects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#expanding-billboard" target="_blank">
+								<span class="primary">Expanding billboard</span>
+								<span class="secondary">Pencil leave behind advertisement</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#web-advertising" target="_blank">
+								<span class="primary">Web Advertising</span>
+								<span class="secondary">Flexible Flash video player with minimalist skin</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#flash-page-peel" target="_blank">
+								<span class="primary">Flash page peel</span>
+								<span class="secondary">Page ear advertisement</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mhulse/me.hulse.util" target="_blank">
+								<span class="primary">Custom AS3 classes.</span>
+								<span class="secondary">Custom AS3 classes I wrote to help make my job easier.</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+			</div> <!-- .pure-u-1 -->
+			
+			<div class="pure-u-1 pure-u-md-1-3">
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Ads</h3>
+						<p>Various selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#the-mattress-company" target="_blank">
+								<span class="primary">The Mattress Company</span>
+								<span class="secondary">Expanding billboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#josh-white-coldwell-banker" target="_blank">
+								<span class="primary">Coldwell Banker</span>
+								<span class="secondary">Leaderboard &amp; box ad for Josh White</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#ems-baseball-photoshop-fun" target="_blank">
+								<span class="primary">Ems baseball Photoshop fun</span>
+								<span class="secondary">Expanding billboard &amp; landing page</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#get-ems-while-theyre-hot" target="_blank">
+								<span class="primary">Get ’Ems while they’re hot!</span>
+								<span class="secondary">Expanding billboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#guaranty" target="_blank">
+								<span class="primary">Guaranty</span>
+								<span class="secondary">Expanding billboard &amp; box ad</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#american-shredding" target="_blank">
+								<span class="primary">American Shredding</span>
+								<span class="secondary">Logo &amp; animation</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Logos</h3>
+						<p>Various selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#2014-election-logo" target="_blank">
+								<span class="primary">2014 Election Logo</span>
+								<span class="secondary">“Your Vote”</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#the-register-guard-2012-readers-choice" target="_blank">
+								<span class="primary">Reader’s Choice</span>
+								<span class="secondary">Logo refresh</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#deal-tip" target="_blank">
+								<span class="primary">Deal Tip</span>
+								<span class="secondary">Logo design</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#the-register-guard-website-flag" target="_blank">
+								<span class="primary">The Register-Guard website flag</span>
+								<span class="secondary">Logo evolution</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#road2natty" target="_blank">
+								<span class="primary">Road2Natty</span>
+								<span class="secondary">Brochure, insert &amp; stickers</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#emower-parts-llc" target="_blank">
+								<span class="primary">eMower Parts LLC</span>
+								<span class="secondary">Logo design</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Print</h3>
+						<p>Various selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#praxis-bioscience" target="_blank">
+								<span class="primary">Praxis Bioscience</span>
+								<span class="secondary">Business cards, website design &amp; template</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#more-repower-specialists" target="_blank">
+								<span class="primary">Repower Specialists</span>
+								<span class="secondary">Brochure, insert &amp; stickers</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#repower-specialists" target="_blank">
+								<span class="primary">Repower Specialists</span>
+								<span class="secondary">Business card, letterhead &amp; envelope</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Cartooning</h3>
+						<p>Characters</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#peeps-2011" target="_blank">
+								<span class="primary">Peeps 2011</span>
+								<span class="secondary">34’ish concept cartoon characters</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#peeps-2004" target="_blank">
+								<span class="primary">Peeps 2004</span>
+								<span class="secondary">Cartoon characters</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Art</h3>
+						<p>Digital and traditional media selects</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#dorky-doodle" target="_blank">
+								<span class="primary">Dorky Doodle</span>
+								<span class="secondary">Dip pen caricature</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#rainy-day" target="_blank">
+								<span class="primary">Rainy Day</span>
+								<span class="secondary">Wacom doodle</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#owl-and-leaves" target="_blank">
+								<span class="primary">Owl &amp; leaves</span>
+								<span class="secondary">Another Wacom still life doodle</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#dia-de-los-cowboys" target="_blank">
+								<span class="primary">Día de los Cowboys</span>
+								<span class="secondary">Experimental technique &amp; practice Photoshop illustration</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Photoshop</h3>
+						<p>A few highlights</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#fun-with-photoshop" target="_blank">
+								<span class="primary">Fun with Photoshop</span>
+								<span class="secondary">Body removal service</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#anthropomorphic-boxy-robot-jesus-head" target="_blank">
+								<span class="primary">Anthropomorphic Boxy Robot Jesus Head</span>
+								<span class="secondary">Photoshop graffiti</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Video</h3>
+						<p>Selects from my time at The Register-Guard</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#2010-civil-war" target="_blank">
+								<span class="primary">2010 Civil War</span>
+								<span class="secondary">Ducks defeat the Beavers, 37-20</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#2009-civil-war" target="_blank">
+								<span class="primary">2009 Civil War</span>
+								<span class="secondary">Ducks defeat the Beavers, 37-33</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#mckenzie-highway" target="_blank">
+								<span class="primary">McKenzie Highway</span>
+								<span class="secondary">Video vignettes</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#how-turin-became-7" target="_blank">
+								<span class="primary">How Turin Became 7.0</span>
+								<span class="secondary">Newspaper upgrade documentary</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#independence-day-2008" target="_blank">
+								<span class="primary">Independence Day 2008</span>
+								<span class="secondary">Alton Baker Park Eugene Oregon</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#2008-prefontaine-classic" target="_blank">
+								<span class="primary">2008 Prefontaine Classic</span>
+								<span class="secondary">The nation’s premier track &amp; field meet</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#2008-elections" target="_blank">
+								<span class="primary">2008 elections</span>
+								<span class="secondary">Obama, Hillary, and election day in Eugene, Oregon</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://mky.io/#coastal-scenes" target="_blank">
+								<span class="primary">Coastal scenes</span>
+								<span class="secondary">Video by Collin Andrew &amp; Micky Hulse</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					
+					<header id="plugins" class="head icon">
+						<h3>Awesome</h3>
+						<p>My 10 minutes of fame</p>
+					</header>
+					
+					<ul class="items">
+						<li>
+							<a href="http://mky.io/#the-european-marge-simpson" target="_blank">
+								<span class="primary">The “European” Marge Simpson</span>
+								<span class="secondary">Google map illustration</span>
+							</a>
+						</li>
+					</ul>
+					
+				</section>
+				
+			</div> <!-- .pure-u-1 -->
+			
+		</div> <!-- /.pure-g -->
 		
 	</main>
+	
+	<footer role="contentinfo">
+		
+		<p>
+			<span>
+				Michael Hulse
+				/
+				(541) 556-4856
+				<span>/</span>
+			</span>
+			<span>
+				<a href="mailto:mickyhulse@gmail.com">mickyhulse@gmail.com</a>
+				/
+				<a href="http://linkedin.com/in/mickyhulse/" target="_blank" title="Check out my profile on LinkedIn!">LinkedIn</a>
+			</span>
+		</p>
+		
+	</footer>
 	
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 	<script src="{{ site.baseurl }}/assets/scripts/site.js?v={{ site.time | date: "%s" }}"></script>

@@ -1,0 +1,66 @@
+main {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.pure-g {
+	
+	[class*="pure-u"] { font-family: $font1; } // http://purecss.io/grids/#using-grids-with-custom-fonts
+	
+	> :first-child { padding-top: 0; }
+	> :last-child { padding-bottom: 0; }
+	
+	&.pure-pad {
+		
+		[class*="pure-u"] { padding: 10px 0; }
+		
+		@media all and (min-width: 960px) {
+			
+			[class*="pure-u"] { padding: 0 20px; }
+			
+			> :first-child { padding-left: 0; }
+			> :last-child { padding-right: 0; }
+			
+		}
+		
+	}
+	
+}
+
+footer[role="contentinfo"] {
+	
+	margin: 25px 0 50px;
+	text-align: center;
+	
+	p {
+		font: 11px/24px Arial, sans-serif;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		color: $gray5;
+		margin: 0;
+		padding: 0;
+	}
+	
+	span { display: block; }
+	span span { display: none; }
+	
+	// a {
+		
+	// 	&,
+	// 	&:visited { color: $gray9; }
+	// 	.no-touch &:visited:hover,
+	// 	&:focus,
+	// 	.no-touch &:focus:hover,
+	// 	.no-touch &:hover,
+	// 	&:active { color: $milk; }
+		
+	// }
+	
+	@media all and (min-width: 640px) {
+		
+		span,
+		span span { display: inline; }
+		
+	}
+	
+}
