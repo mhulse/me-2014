@@ -33,6 +33,8 @@ $ gem update
 # Brew:
 $ brew update
 $ brew doctor
+```
+
 ---
 
 Copyright © 2014 Micky Hulse. All rights reserved.
